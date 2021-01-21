@@ -31,19 +31,7 @@ export default {
             ]
         }
     },
-    methods:{
-         autoPlay() {
-            this.timer = setInterval(() => { //setInterval：window对象方法，这里如果是按照之前的写法，this指向的是window，而此处我们需要的vue实例对象
-                this.index++;
-                if (this.index > this.banner.length - 1) {
-                    this.index = 0;
-                }
-            }, 3000);
-        },
-    },
-    mounted(){
-        this.autoPlay();
-    }
+  
 }
 </script>
 

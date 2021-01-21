@@ -10,7 +10,7 @@
         </div>
         <div class="bottom">
             <div class="work-list clearfix">
-                <div class="box" :class="{active:k==index}" v-for="(v,k) in workList" :key="v.id">
+                <div class="box" :class="{active:k==index}" v-for="(v,k) in workList" :key="v.id" @click="index=k">
                     <a href="javascript:;">
                         <img :src="v.imgUrl" alt="">
                     </a>
@@ -57,11 +57,11 @@ export default {
           position: absolute;
           right:5%;
           @media (max-width: 420px){
-            top:-195%;
+            top:-178%;
             @media (max-width: 375px){
-              top:-257%;
+              top:-178%;
               @media (max-width: 320px) {
-                top: -242%;
+                top: -89%;
               }
             }
           }
@@ -70,10 +70,12 @@ export default {
           .leftNav{
             width:79%;
             .navTab(100%);
-            /deep/ .nav-pills>li+li  {
-              margin-left:-2px!important;
-            }
-            
+              @media (min-width: 375px) {
+                /deep/ .nav-pills>li+li  {
+                    margin-left:-2px!important;
+                  }
+              }
+                       
           }
          
           .more{

@@ -1,6 +1,6 @@
 <template>
   <div>
-      <Public @e-index="contact">
+      <Public :contact="contact" :wechat="wechat" :menuList="menuList">
         <section class="content" slot="content">
             <About :descript="descript"/>
             <Ywtx v-bind:icons="icons"/>
@@ -65,7 +65,16 @@ export default {
                 {id:3,name:"电话：13625899525",imgUrl:'../../../static/image/phone/tb_11.png'},
                 {id:4,name:"电话：13625899525",imgUrl:'../../../static/image/phone/tb_14.png'},
                 {id:5,name:"电话：13625899525",imgUrl:'../../../static/image/phone/tb_16.png'},
-            ]
+            ],
+            menuList:[
+                  {id:1,name:"首页",url:'/'},
+                  {id:2,name:"业务体系",url:'/'},
+                  {id:3,name:"优秀作品",url:'/'},
+                  {id:4,name:"人才共享",url:'/'},
+                  {id:5,name:"新闻动态",url:'/'},
+                  {id:6,name:"关于我们",url:'/'},
+            ],
+            wechat:["../../../static/image/phone/ewm_03.png","../../../static/image/phone/ewm_05.png"]
         }
     },
     components:{
@@ -76,9 +85,6 @@ export default {
         Rcgx,
         News
     },
-    mounted(){
-        this.$emit('data-footer',this.contact);
-    }
 
 }
 </script>

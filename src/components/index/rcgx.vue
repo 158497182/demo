@@ -5,8 +5,8 @@
         </div>
         <div class="bottom">
             <div class="persons clearfix"  >
-                <div :class="{active:index==k}" v-for="(v,k) in rcgxList" :key="v.id" >
-                    <a href="#">
+                <div :class="{active:index==k}" v-for="(v,k) in rcgxList" :key="v.id" @click="index=k">
+                    <a href="javascript:;">
                         <img :src="v.imgUrl" />
                     </a>
                     <p class="intro text-center">

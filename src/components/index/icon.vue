@@ -1,6 +1,6 @@
 <template>
     <ul class="lists">
-        <li v-for="(v,k) in icons" class="text-center" :key="v.id" :class="{active:index==k}">
+        <li v-for="(v,k) in icons" class="text-center" :key="v.id" :class="{active:index==k}" @click="index=k">
             <div class="detail">
                 <a href="javascript:;">
                     <img :src="v.imgUrl" alt="" />

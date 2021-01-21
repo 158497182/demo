@@ -3,7 +3,7 @@
        <section class="container-fluid">
             <!--头部-->
             <div>
-                <HeaderTop/>
+                <HeaderTop v-bind="$attrs"/>
             </div>
              <!--banner-->
             <div>
@@ -15,7 +15,7 @@
             </div>
             <!--底部-->
             <div>
-                <FooterBottom :contact="contact"></FooterBottom>
+                <FooterBottom v-bind="$attrs"></FooterBottom>
             </div>
        </section>
   </div>

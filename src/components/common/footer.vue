@@ -10,11 +10,11 @@
         </section>
         <section class="contact">
             <address class="text-center">
-                <p>
-                    <img src="../../../static/image/phone/tb_03.png" alt="">
-                    <span>电话：13625899525</span>
+                <p v-for="(v,k) in contact" :key="k">
+                    <img :src="v.imgUrl" alt="">
+                    <span>{{v.name}}</span>
                 </p>
-                <p>
+                <!-- <p>
                     <img src="../../../static/image/phone/tb_07.png" alt="">
                     <span>电话：13625899525</span>
                 </p>
@@ -29,14 +29,14 @@
                 <p>
                     <img src="../../../static/image/phone/tb_16.png" alt="">
                     <span>电话：13625899525</span>
-                </p>
+                </p> -->
             </address>
             <div class="ewm clearfix">
                 <div class="pull-left">
-                    <img src="../../../static/image/phone/ewm_03.png" alt="" />
+                    <img :src="wechat[0]" alt="" />
                 </div>
                 <div class="pull-right">
-                    <img src="../../../static/image/phone/ewm_05.png" alt="" />
+                    <img :src="wechat[1]" alt="" />
                 </div>
             </div>
         </section>
@@ -48,15 +48,16 @@
 export default {
   name:"Footer",
   data(){
-    return {
-      contact:[]
-    }
+        return{
+            // 'contact':[],
+            // "wechat":[]
+        }
   },
-  mounted(){
-    this.$on("data-footer",function(value){
-// console.log(value);
-    });
-  }
+  // mounted(){
+  //       this.contact = localStorage.getItem("contact");
+  //       this.wechat = localStorage.getItem("wechat");
+  // },   
+  props:['contact',"wechat"]
 }
 </script>
 

@@ -14,11 +14,9 @@
                         <img src="../../../static/image/phone/close_03.png" alt="" />
                     </div>
                     <ul class="nav">
-                        <li><a href="#" class="text-center ">首页首页</a></li>
-                        <li><a href="#" class="text-center current">首页</a></li>
-                        <li><a href="#" class="text-center">首页</a></li>
-                        <li><a href="#" class="text-center">首页</a></li>
-                        <li><a href="#" class="text-center">首页</a></li>
+                        <li v-for="(v,k) in menuList" :key="v.id" @click="toMenu(k)">
+                         <a href="javascript:;" class="text-center " :class="{current:index==k}">{{v.name}}</a>
+                        </li>
                     </ul>
                 </div>
         </section>
@@ -30,7 +28,8 @@ export default {
     name:'Header',
     data(){
         return{
-            isShow:false
+            isShow:false,
+            index:0
         }
     },
     methods:{
@@ -39,8 +38,14 @@ export default {
         },
         close(){
              this.isShow = !this.isShow;
+        },
+        toMenu(key){
+          this.index = key;
+          this.$router.push(this.menuList[key].url);
+          this.isShow = !this.isShow;
         }
-    }
+    },
+    props:["menuList"]
 }
 </script>
 
