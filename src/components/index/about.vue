@@ -1,0 +1,98 @@
+<template>
+<div>
+    <section class="about clearfix">
+        <div class="pull-left about-left">
+            <div class="about-intro">
+                <h4 class="text-center">{{descript[0].name}}</h4>
+                <p>
+                   {{descript[0].des}}
+                </p>
+            </div>
+
+            <div class="more">
+                <a href="#"><img src="../../../static/image/phone/more_03.png" alt="" /></a>
+            </div>
+        </div>
+        <div class="pull-right about-right">
+            <div class="top-about">
+                <h4 class="text-center"> {{descript[1].name}}</h4>
+                <p>
+                    {{descript[1].des}}
+                </p>
+            </div>
+            <div class="about-img">
+                <img :src=" descript[1].imgUrl" alt="" />
+            </div>
+        </div>
+    </section>
+</div>
+  
+</template>
+
+<script>
+export default {
+    name:"About",
+    props:['descript']
+}
+</script>
+
+<style lang="less" scoped>
+ @import '../../assets/css/common.less';
+ /*关于我们*/
+    .about{
+      width: 100%;
+      position: relative;
+      .about-left{
+        width: 47%;
+        h4{
+          .baseH4(@h4,5% 0% 0%,@color);
+        }
+        p{
+          .baseP(1.4rem,justify);
+          width:85%;
+          line-height: 30px;
+        }
+        .more{
+          width:22%;
+          margin:-3% 9% 0% 0%;
+          float: right;
+          img{
+            width: 100%;
+          }
+        }
+      }
+      .about-right{
+        width: 48%;
+        .top-about{
+          width: 48%;
+          height: auto;
+          background: #ffffff;
+          position: absolute;
+          top: -24%;
+          right: 1%;
+          h4{
+            .baseH4(1.4rem,1% 0% 0%,#000000);
+          }
+          p{
+            .baseP(1.2rem,justify);
+            line-height: 30px;
+          }
+        }
+        .about-img{
+          width: 100%;
+          @media (max-width: 420px){
+            margin-top:70%;
+            @media (max-width: 360px){
+              margin-top:96%;
+              @media (max-width: 320px){
+                margin-top: 140%;
+              }
+            }
+          }
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+</style>
