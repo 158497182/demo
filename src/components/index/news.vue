@@ -5,11 +5,16 @@
                 <h4 class="text-center">新闻动态</h4>
             </div>
             <div class="middle clearfix">
-                  <ComMenu v-bind="$attrs"/>
+<!--                  <ComMenu v-bind="$attrs" :cateId="cateId"/>-->
+              <ul class="nav nav-pills">
+                <li v-if="menu" :class="{active:v.id==cateId}" v-for="(v,k) in menu" :key="v.id" v-on:click="change(v)" >
+                  <a href="javascript:;">{{v.name}}</a>
+                </li>
+              </ul>
             </div>
         </div>
         <div class="news-detail">
-            <div class="lists"  v-for="(v,k) in newsList" :key="v.id">
+            <div v-if="cateId==0" class="lists"  v-for="(v,k) in newsList.slice(0,2)" :key="v.id" >{{v}}
                 <div class="news-img">
                     <a href="#"><img :src="v.imgUrl" alt=""></a>
                     <time class="time pull-right">Time:{{v.time}}</time>
@@ -21,6 +26,18 @@
                     </p>
                 </div>
             </div>
+            <div v-else="cateId==newsList[0].cate_id" class="lists"  v-for="(v,k) in lists.slice(0,2)" :key="v.id" >{{v}}
+            <div class="news-img">
+              <a href="#"><img :src="v.imgUrl" alt=""></a>
+              <time class="time pull-right">Time:{{v.time}}</time>
+            </div>
+            <div class="news-intro">
+              <h6 class="text-center">{{v.title}}</h6>
+              <p class="text-center">
+                <a href="#" class="small">{{v.des}}</a>
+              </p>
+            </div>
+          </div>
         </div>
     </section>
 </template>
@@ -31,13 +48,27 @@ export default {
     name:"News",
     data(){
         return{
-            index:0
+          index:0,
+          cateId:0,
+          current:0,
+          lists:[]
         }
     },
     components:{
         ComMenu
     },
-    props:['newsList']
+    methods:{
+      change(item) {
+        this.cateId = item.id;
+        //如果点击分类，切换对应的列表
+        if (this.cateId != 0) {
+          this.lists = this.newsList.filter(item => item.cate_id == this.cateId);
+        } else {
+          this.lists = this.newsList;
+        }
+      },
+    },
+    props:['newsList',"menu"]
 }
 </script>
 

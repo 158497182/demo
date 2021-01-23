@@ -4,9 +4,9 @@
         <section class="content" slot="content">
             <About :descript="descript"/>
             <Ywtx v-bind:icons="icons"/>
-            <Work :workMenu="workMenu" :workList="workList"/>
+            <Work :menu="workMenu" :workList="workList"/>
             <Rcgx :rcgxList="rcgxList"/>
-            <News :newsList="newsList" :newsMenu="newsMenu"/>
+            <News :newsList="newsList" :menu="newsMenu"/>
         </section>
       </Public>
   </div>
@@ -27,17 +27,30 @@ export default {
                 {name:'关于我们',des:" 自成立以来，始终致力于为中国企业提供专业信息化服务， 在川内率先开创了专属个性化定制模式，实现企业“信息化运营”。"},
                 {name:'成都商脉科技有限公司',des:'四川商脉科技有限公司，位于成都锦江区大型商圈内，拥有行业顶级的技术人才。',imgUrl:'../../../static/image/phone/about_03.png'}
             ],
-           
-           workMenu:[
-                {id:1,name:'All'},
-                {id:2,name:'网页设计'},
-                {id:3,name:'UI设计'},
-                {id:4,name:'微信设计'}
+            workMenu:[
+                {id:0,name:'All'},
+                {id:1,name:'网页设计'},
+                {id:2,name:'UI设计'},
+                {id:3,name:'微信设计'}
+            ],
+            workList:[
+              {id:1,title:"林氏木业1",cate_id:1,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
+              {id:2,title:"林氏木业1",cate_id:1,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
+              {id:3,title:"林氏木业2",cate_id:2,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_05.png'},
+              {id:4,title:"林氏木业2",cate_id:2,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_05.png'},
+              {id:5,title:"林氏木业3",cate_id:3,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
+              {id:6,title:"林氏木业3",cate_id:3,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
             ],
             newsMenu:[
-                {id:1,name:'All'},
-                {id:2,name:'动态新闻'},
-                {id:3,name:'行业新闻'},
+                {id:0,name:'All'},
+                {id:1,name:'动态新闻'},
+                {id:2,name:'行业新闻'},
+            ],
+            newsList:[
+              {id:1,cate_id:1,imgUrl:"../../../static/image/phone/news_03.png",time:"2020/12/14",title:"2021年你该如何规划",des:"经过上半年的观察，成都商脉科技有限"},
+              {id:2,cate_id:1,imgUrl:"../../../static/image/phone/news_03.png",time:"2020/12/14",title:"2021年你该如何规划",des:"经过上半年的观察，成都商脉科技有限"},
+              {id:3,cate_id:2,imgUrl:"../../../static/image/phone/news_03.png",time:"2020/12/14",title:"2021年你该如何规划",des:"经过上半年的观察，成都商脉科技有限"},
+              {id:4,cate_id:2,imgUrl:"../../../static/image/phone/news_03.png",time:"2020/12/14",title:"2021年你该如何规划",des:"经过上半年的观察，成都商脉科技有限"},
             ],
             icons:[
                 {id:1,name:"网页设计",imgUrl:'../../../static/image/phone/ph_01.png'},
@@ -47,14 +60,8 @@ export default {
                 {id:5,name:"网页设计",imgUrl:'../../../static/image/phone/ph_01.png'},
                 {id:6,name:"网页设计",imgUrl:'../../../static/image/phone/ph_01.png'}
             ],
-            workList:[
-                {id:1,title:"林氏木业",des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
-                {id:2,title:"林氏木业",des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
-            ],
-            newsList:[
-                {id:1,imgUrl:"../../../static/image/phone/news_03.png",time:"2020/12/14",title:"2021年你该如何规划",des:"经过上半年的观察，成都商脉科技有限"},
-                {id:2,imgUrl:"../../../static/image/phone/news_03.png",time:"2020/12/14",title:"2021年你该如何规划",des:"经过上半年的观察，成都商脉科技有限"}
-            ],
+
+
             rcgxList:[
                 {id:1,name:"何丽 UI设计师",imgUrl:'../../../static/image/phone/person_03.png'},
                 {id:2,name:"何丽 UI设计师",imgUrl:'../../../static/image/phone/person_03.png'},
@@ -90,5 +97,5 @@ export default {
 </script>
 
 <style lang="less" scoped>
-         
+
 </style>
