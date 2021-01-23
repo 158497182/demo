@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="news-detail">
-            <div v-if="cateId==0" class="lists"  v-for="(v,k) in newsList.slice(0,2)" :key="v.id" >{{v}}
+            <div  class="lists" v-for="(v,k) in lists.slice(0,2)" :key="v.id" >
                 <div class="news-img">
                     <a href="#"><img :src="v.imgUrl" alt=""></a>
                     <time class="time pull-right">Time:{{v.time}}</time>
@@ -26,18 +26,19 @@
                     </p>
                 </div>
             </div>
-            <div v-else="cateId==newsList[0].cate_id" class="lists"  v-for="(v,k) in lists.slice(0,2)" :key="v.id" >{{v}}
-            <div class="news-img">
-              <a href="#"><img :src="v.imgUrl" alt=""></a>
-              <time class="time pull-right">Time:{{v.time}}</time>
-            </div>
-            <div class="news-intro">
-              <h6 class="text-center">{{v.title}}</h6>
-              <p class="text-center">
-                <a href="#" class="small">{{v.des}}</a>
-              </p>
-            </div>
-          </div>
+<!--            <div v-else="cateId==newsList[0].cate_id" class="lists"  v-for="(v,k) in lists.slice(0,2)" :key="v.id" >{{v}}-->
+<!--            <div class="news-img">-->
+<!--              <a href="#"><img :src="v.imgUrl" alt=""></a>-->
+<!--              <time class="time pull-right">Time:{{v.time}}</time>-->
+<!--            </div>-->
+<!--            <div class="news-intro">-->
+<!--              <h6 class="text-center">{{v.title}}</h6>-->
+<!--              <p class="text-center">-->
+<!--                <a href="#" class="small">{{v.des}}</a>-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--       -->
         </div>
     </section>
 </template>
@@ -60,6 +61,7 @@ export default {
     methods:{
       change(item) {
         this.cateId = item.id;
+        console.log(this.cateId);
         //如果点击分类，切换对应的列表
         if (this.cateId != 0) {
           this.lists = this.newsList.filter(item => item.cate_id == this.cateId);
@@ -68,6 +70,9 @@ export default {
         }
       },
     },
+  mounted(){
+      this.lists = this.newsList;
+  },
     props:['newsList',"menu"]
 }
 </script>

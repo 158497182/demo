@@ -34,12 +34,12 @@ export default {
                 {id:3,name:'微信设计'}
             ],
             workList:[
-              {id:1,title:"林氏木业1",cate_id:1,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
-              {id:2,title:"林氏木业1",cate_id:1,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
-              {id:3,title:"林氏木业2",cate_id:2,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_05.png'},
-              {id:4,title:"林氏木业2",cate_id:2,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_05.png'},
-              {id:5,title:"林氏木业3",cate_id:3,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
-              {id:6,title:"林氏木业3",cate_id:3,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
+              {id:1,title:"林氏木业",cate_id:1,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
+              {id:2,title:"林氏木业",cate_id:1,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
+              {id:3,title:"林氏木业",cate_id:2,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_05.png'},
+              {id:4,title:"林氏木业",cate_id:2,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_05.png'},
+              {id:5,title:"林氏木业",cate_id:3,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
+              {id:6,title:"林氏木业",cate_id:3,des:"家具品牌网络营销",imgUrl:'../../../static/image/phone/work-ph_03.png'},
             ],
             newsMenu:[
                 {id:0,name:'All'},
@@ -48,8 +48,8 @@ export default {
             ],
             newsList:[
               {id:1,cate_id:1,imgUrl:"../../../static/image/phone/news_03.png",time:"2020/12/14",title:"2021年你该如何规划",des:"经过上半年的观察，成都商脉科技有限"},
-              {id:2,cate_id:1,imgUrl:"../../../static/image/phone/news_03.png",time:"2020/12/14",title:"2021年你该如何规划",des:"经过上半年的观察，成都商脉科技有限"},
-              {id:3,cate_id:2,imgUrl:"../../../static/image/phone/news_03.png",time:"2020/12/14",title:"2021年你该如何规划",des:"经过上半年的观察，成都商脉科技有限"},
+              {id:2,cate_id:1,imgUrl:"../../../static/image/phone/news_06.png",time:"2020/12/14",title:"2021年你该如何规划",des:"经过上半年的观察，成都商脉科技有限"},
+              {id:3,cate_id:2,imgUrl:"../../../static/image/phone/news_09.png",time:"2020/12/14",title:"2021年你该如何规划",des:"经过上半年的观察，成都商脉科技有限"},
               {id:4,cate_id:2,imgUrl:"../../../static/image/phone/news_03.png",time:"2020/12/14",title:"2021年你该如何规划",des:"经过上半年的观察，成都商脉科技有限"},
             ],
             icons:[
