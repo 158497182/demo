@@ -1,6 +1,6 @@
 @import "common.less";
 .content{
-  .about{
+  /deep/ .about{
     .top{
       margin-top:5%;
     }
@@ -31,7 +31,7 @@
       }
     }
   }
-  .intro {
+ /deep/ .intro {
     margin-top: 5%;
     background: #eeeeee;
     .lists {
@@ -58,7 +58,7 @@
       }
     }
   }
-  .case{
+ /deep/ .case{
     margin-top: 5%;
     .title{
       .title(100%,4rem);
@@ -70,7 +70,7 @@
       .indicators{
         .indicators(2.2rem,#c9c9c9);
         position:absolute;
-        top: 119%;
+        top: 110%;
         left: 41%;
       }
       .work-list {

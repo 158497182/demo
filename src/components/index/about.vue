@@ -2,27 +2,16 @@
 <div>
     <section class="about clearfix">
         <div class="pull-left about-left">
-            <div class="about-intro">
-                <h4 class="text-center">{{descript[0].name}}</h4>
-                <p>
-                   {{descript[0].des}}
-                </p>
+            <div class="about-intro" v-html="descript[0]">
+
             </div>
 
             <div class="more">
                 <a href="#"><img src="../../../static/image/phone/more_03.png" alt="" /></a>
             </div>
         </div>
-        <div class="pull-right about-right">
-            <div class="top-about">
-                <h4 class="text-center"> {{descript[1].name}}</h4>
-                <p>
-                    {{descript[1].des}}
-                </p>
-            </div>
-            <div class="about-img">
-                <img :src=" descript[1].imgUrl" alt="" />
-            </div>
+        <div class="pull-right about-right" v-html="descript[1]">
+
         </div>
     </section>
 </div>

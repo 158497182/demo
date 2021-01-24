@@ -10,6 +10,8 @@ import NewsDetail from '@/components/NewsDetail'
 import WorkDetail from '@/components/WorkDetail'
 import Share from '@/components/Share'
 import ShareDetail from '@/components/ShareDetail'
+import Shop from '@/components/Shop'
+import Wechat from '@/components/Wechat'
 
 Vue.use(Router)
 
@@ -37,6 +39,16 @@ export default new Router({
         path:"/share/detail",
         name:"ShareDetail",
         component: ShareDetail
+      },
+      {
+        path:"/shop",
+        name:"Shop",
+        component: Shop
+      },
+      {
+        path:"/wechat",
+        name:"Wechat",
+        component: Wechat
       },
       {
         path: '/work',

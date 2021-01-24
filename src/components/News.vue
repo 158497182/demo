@@ -12,13 +12,14 @@
       <div class="middle">
         <div class="top-nav">
           <ul class="nav nav-pills">
-            <li :class="{active:index==k}"  v-for="(val,k) in cate" :key="val.id">
-              <a href="javascript:;">{{val.name}}</a>
+            <li :class="{active:val.id==cateId}"  v-for="(val,k) in cate" :key="val.id">
+              <a href="javascript:;" @click="change(val)">{{val.name}}</a>
             </li>
           </ul>
         </div>
         <div class="lists clearfix">
-          <div class="box" v-for="(va,k) in newslists" :key="va.id">
+          <div class="box" v-for="(va,k) in newslists.slice((currentPage- 
+    1)*pageSize,currentPage*pageSize)" :key="va.id">
             <a href="javascript:;">
               <img :src="va.imgUrl" alt="">
             </a>
@@ -31,14 +32,23 @@
             </p>
           </div>
         </div>
-        <ul class="pagination">
+         <el-pagination :page-size="pageSize" background
+                  @current-change="changePage"
+                  @prev-click="changePage"
+                  @next-click="changePage"
+                  layout="prev, pager, next"
+                  :current-page.sync = "currentPage"
+                  :total="lists.length">
+          </el-pagination>
+
+        <!-- <ul class="pagination">
           <li><a href="#" class="disabled">前一页</a></li>
           <li class="active"><a href="#">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">4</a></li>
           <li><a href="#">后一页</a></li>
-        </ul>
+        </ul> -->
       </div>
 
     </section>
@@ -55,6 +65,11 @@
       data(){
           return {
             index:0,
+            cateId:0,
+            page: 1,
+            pageSize: 2,
+            currentPage: 1,
+            lists:[],
             cate:[
               {id:0,name:'All'},
               {id:1,name:'设计'},
@@ -74,7 +89,23 @@
       methods:{
           toDetail(id){
             this.$router.push({path:'/news/detail', params:{ id: id }});
-          }
+          },
+          change(item) {
+            this.cateId = item.id;
+            // console.log(this.cateId,item.id)
+            //如果点击分类，切换对应的列表
+            if (this.cateId != 0) {
+              this.lists = this.newslists.filter(item => item.cate_id == this.cateId);
+            } else {
+              this.lists = this.newslists;
+            }
+          },
+          changePage(val) {
+            this.currentPage = val;
+          },
+      },
+      mounted(){
+          this.lists = this.newslists;
       }
     }
 </script>

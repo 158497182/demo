@@ -13,11 +13,13 @@
                     <div @click="close">
                         <img src="../../../static/image/phone/close_03.png" alt="" />
                     </div>
+                  
                     <ul class="nav">
-                        <li v-for="(v,k) in menuList" :key="v.id" @click="toMenu(v.id)">
-                         <a href="javascript:;" class="text-center " :class="{current:index==v.id}">{{v.name}}</a>
+                        <li v-for="(v,k) in menuList" :key="v.id">
+                         <a href="javascript:;" class="text-center" :class="{current:index==v.id}"  @click="toMenu(v.id)">{{v.name}}</a>
                         </li>
                     </ul>
+                  
                 </div>
         </section>
   </div>

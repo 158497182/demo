@@ -1,6 +1,6 @@
 @import "common.less";
 .content{
-  .about{
+  /deep/.about{
     .top{
       margin-top:5%;
     }
@@ -31,7 +31,7 @@
       }
     }
   }
-  .intro {
+  /deep/.intro {
     margin-top: 5%;
     background: #eeeeee;
     .lists {
@@ -57,32 +57,5 @@
       }
     }
   }
-  .case{
-    margin-top: 5%;
-    .title{
-      .title(100%,4rem);
-    }
-    .bottom{
-      width: 100%;
-      margin-top:5%;
-      position: relative;
-      .indicators{
-        .indicators(2.2rem,#c9c9c9);
-        position:absolute;
-        top: 119%;
-        left: 41%;
-      }
-      .work-list {
-        .flexStyle(90%,nowrap);
-        div{
-          width:47%;
-          margin-left:2%;
-          img{
-            width: 100%;
-          }
-        }
-      }
-      .arrow(31%,1%,-5%);
-    }
-  }
+
 }

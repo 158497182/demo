@@ -23,10 +23,18 @@ export default {
     name:'Index',
     data(){
         return{
-            descript:[
-                {name:'关于我们',des:" 自成立以来，始终致力于为中国企业提供专业信息化服务， 在川内率先开创了专属个性化定制模式，实现企业“信息化运营”。"},
-                {name:'成都商脉科技有限公司',des:'四川商脉科技有限公司，位于成都锦江区大型商圈内，拥有行业顶级的技术人才。',imgUrl:'../../../static/image/phone/about_03.png'}
-            ],
+          descript:[` <h4 class="text-center">关于我们</h4>
+                <p>
+                  自成立以来，始终致力于为中国企业提供专业信息化服务， 在川内率先开创了专属个性化定制模式，实现企业“信息化运营”。
+                </p>`,` <div class="top-about">
+                <h4 class="text-center"> 成都商脉科技有限公司</h4>
+                <p>
+                  四川商脉科技有限公司，位于成都锦江区大型商圈内，拥有行业顶级的技术人才。
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="../../../static/image/phone/about_03.png" alt="" />
+            </div>`],
             workMenu:[
                 {id:0,name:'All'},
                 {id:1,name:'网页设计'},

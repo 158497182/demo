@@ -6,7 +6,7 @@
     }
     .middle{
       margin-top:5%;
-      .lists{
+     /deep/ .lists{
         .left{
           width:48%;
           img{
@@ -28,9 +28,9 @@
       }
     }
   }
-  .intro {
-    .baseBackg(32rem,"../image/phone/web-bg_02.png");
-    .lists {
+  /deep/.intro {
+    .baseBackg(41rem,"../image/phone/web-bg_02.png");
+   .lists {
       height: 251px;
       padding-top: 26%;
       .flexStyle(100%, wrap);
@@ -59,32 +59,32 @@
       }
     }
   }
-  .case{
-    margin-top: 5%;
-    .title{
-      .title(100%,4rem);
-    }
-    .bottom{
-      width: 100%;
-      margin-top:5%;
-      position: relative;
-      .indicators{
-        .indicators(2.2rem,#c9c9c9);
-        position:absolute;
-        top: 119%;
-        left: 41%;
-      }
-      .work-list {
-        .flexStyle(90%,nowrap);
-        div{
-          width:47%;
-          margin-left:2%;
-          img{
-            width: 100%;
-          }
-        }
-      }
-      .arrow(31%,1%,-5%);
-    }
-  }
+ /deep/.case{
+   margin-top: 5%;
+   .title{
+     .title(100%,4rem);
+   }
+   .bottom{
+     width: 100%;
+     margin-top:5%;
+     position: relative;
+     .indicators{
+       .indicators(2.2rem,#c9c9c9);
+       position:absolute;
+       top: 119%;
+       left: 41%;
+     }
+     .work-list {
+       .flexStyle(90%,nowrap);
+       div{
+         width:47%;
+         margin-left:2%;
+         img{
+           width: 100%;
+         }
+       }
+     }
+     .arrow(31%,1%,-5%);
+   }
+ }
 }
