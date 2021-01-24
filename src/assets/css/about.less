@@ -1,0 +1,83 @@
+@import "common.less";
+
+.content{
+  .top{
+    width: 100%;
+    margin-top:5%;
+  }
+  .middle{
+    width:100%;
+    margin-top:5%;
+    .title{
+      width: 100%;
+      h4{
+        .baseH4(2rem,0,@color);
+      }
+    }
+    .company-con{
+      .top-con{
+        .baseP(3rem,justify);
+      }
+      .mid-con{
+        .left{
+          width:45%;
+          img{
+            width: 100%;
+            margin-top:10%;
+          }
+        }
+        .right{
+          width:45%;
+          .baseP(2rem,justify);
+        }
+      }
+    }
+
+  }
+  .company{
+    .baseBackg(32rem,"../image/phone/ywtx_02.png");
+    .title{
+      padding-top: 10%;
+      h4{
+        .baseH4(@h4,2% 0% 0%,#ffffff);
+      }
+    }
+    .lists{
+      padding-top:10%;
+      .flexStyle(100%,nowrap);
+      .active{
+        .detail{
+          background: @color;
+        }
+      }
+      li{
+        .baseLi(33.3%);
+        .detail{
+          .detail(62px,62px,62px,#ffffff,5% 0% 0% 18%);
+          img{
+            .baseImg(56%,27% -1% 0% 0%)
+          }
+        }
+        p{
+          margin-top:3%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .bottom{
+    .left{
+      width:40%;
+      p{
+        .baseP(2rem,justify);
+      }
+    }
+    .right{
+      width:40%;
+      img{
+        width: 100%;
+        margin-top:10%;
+      }
+    }
+  }
+}

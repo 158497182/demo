@@ -1,0 +1,90 @@
+@import "common.less";
+.content{
+  .about{
+    .top{
+      margin-top:5%;
+    }
+    .middle{
+      margin-top:5%;
+      .lists{
+        .left{
+          width:48%;
+          img{
+            width: 100%;
+            margin-top:21%;
+          }
+        }
+        .right{
+          width: 45%;
+          .title{
+            .baseH4(@size,0%,@color);
+          }
+          .gwsc-con{
+            p{
+              .baseP(1rem,justify);
+            }
+          }
+        }
+      }
+    }
+  }
+  .intro {
+    .baseBackg(32rem,"../image/phone/web-bg_02.png");
+    .lists {
+      height: 251px;
+      padding-top: 26%;
+      .flexStyle(100%, wrap);
+      li {
+        .baseLi(40%);
+        margin:2% 2% 0% 2%;
+        .detail {
+          .detail(100%, 10rem, 0px, #ffffff, 0);
+          img {
+            .baseImg(25%,  14% -1% 0% 0%);
+          }
+          p {
+            width:80%;
+            margin-left:10%;
+            margin-top: 7%;
+            font-size:1.2rem;
+            text-align: center;
+          }
+        }
+      }
+      .active{
+        .detail{
+          background: @color;
+          color:#ffffff;
+        }
+      }
+    }
+  }
+  .case{
+    margin-top: 5%;
+    .title{
+      .title(100%,4rem);
+    }
+    .bottom{
+      width: 100%;
+      margin-top:5%;
+      position: relative;
+      .indicators{
+        .indicators(2.2rem,#c9c9c9);
+        position:absolute;
+        top: 119%;
+        left: 41%;
+      }
+      .work-list {
+        .flexStyle(90%,nowrap);
+        div{
+          width:47%;
+          margin-left:2%;
+          img{
+            width: 100%;
+          }
+        }
+      }
+      .arrow(31%,1%,-5%);
+    }
+  }
+}

@@ -1,0 +1,58 @@
+@import "../common.less";
+/*新闻动态*/
+.news{
+  margin-top:5%;
+  .top{
+    position: relative;
+    .title{
+      .title(45%,6rem);
+      position: absolute;
+      right:6%;
+      @media (max-width: 420px) {
+        top: -189%;
+        @media (max-width: 375px) {
+          top: -220%;
+          @media (max-width: 320px) {
+            top:-218%;
+          }
+        }
+      }
+    }
+    .middle{
+      .navTab(79%);
+      .more{
+        width: 21%;
+        margin-top:3%;
+      }
+    }
+  }
+  .news-detail{
+    .flexStyle(100%,nowrap);
+    .lists{
+      width: 48%;
+      height: auto;
+      margin-top:6%;
+      margin-left:2%;
+      background: #eeeeee;
+      position: relative;
+      .news-img{
+        margin-left:4%;
+        img{
+          width: 100%;
+        }
+        .time{
+          position: absolute;
+          top: 49%;
+          right: 3%;
+          font-size: 0.5em;
+        }
+      }
+      .news-intro{
+        margin-top:22%;
+        p{
+          .baseP(1rem,justify);
+        }
+      }
+    }
+  }
+}

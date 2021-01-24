@@ -1,0 +1,68 @@
+@import "common.less";
+.more(){
+  width:10.8rem;
+  height:5rem;
+  background: #000000;
+  border-radius: 5px;
+  a{
+    color:#ffffff;
+    line-height: 5rem;
+  }
+}
+.content{
+  .top{
+    margin-top:5%;
+  }
+  .middle{
+    margin-top:5%;
+    .lists{
+      width:100%;
+      background: #ffffff;
+      margin-top:5%;
+      .title{
+        margin-top:5%;
+      }
+      img{
+        width:100%;
+        margin-top:19%;
+      }
+      .left{
+        width:40%
+      }
+      .right{
+        width:50%;
+      }
+
+      &:nth-child(even){
+        .left{
+          position:relative;
+          .more{
+            .more();
+            position: absolute;
+            top: 84%;
+            left: 28%;
+          }
+        }
+      }
+      &:nth-child(odd){
+        .right{
+          position:relative;
+          .more{
+            .more();
+            position: absolute;
+            top: 85%;
+            left: -5%;
+          }
+        }
+      }
+    }
+    .active{
+      .more{
+        background: @color!important;
+      }
+    }
+    .pagination{
+      margin: 20px 24px 0px!important;
+    }
+  }
+}
