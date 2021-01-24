@@ -3,7 +3,7 @@
        <section class="container-fluid">
             <!--头部-->
             <div>
-                <HeaderTop v-bind="$attrs"/>
+                <HeaderTop/>
             </div>
              <!--banner-->
             <div>
@@ -15,7 +15,7 @@
             </div>
             <!--底部-->
             <div>
-                <FooterBottom v-bind="$attrs"></FooterBottom>
+                <FooterBottom></FooterBottom>
             </div>
        </section>
   </div>
@@ -32,7 +32,7 @@ export default {
         Banner,
         FooterBottom
     },
-    
+
 }
 </script>
 

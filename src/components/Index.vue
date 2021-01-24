@@ -1,10 +1,10 @@
 <template>
   <div>
-      <Public :contact="contact" :wechat="wechat" :menuList="menuList">
+      <Public>
         <section class="content" slot="content">
             <About :descript="descript"/>
             <Ywtx v-bind:icons="icons"/>
-            <Work :menu="workMenu" :workList="workList"/>
+            <Work ref="work" :menu="workMenu" :workList="workList" />
             <Rcgx :rcgxList="rcgxList"/>
             <News :newsList="newsList" :menu="newsMenu"/>
         </section>
@@ -60,8 +60,11 @@ export default {
                 {id:5,name:"网页设计",imgUrl:'../../../static/image/phone/ph_01.png'},
                 {id:6,name:"网页设计",imgUrl:'../../../static/image/phone/ph_01.png'}
             ],
-
-
+            banner:[
+              {id:1,imgUrl:"../../static/image/phone/banner_ph.png"},
+              {id:2,imgUrl:"../../static/image/phone/banner_ph.png"},
+              {id:3,imgUrl:"../../static/image/phone/banner_ph.png"},
+            ],
             rcgxList:[
                 {id:1,name:"何丽 UI设计师",imgUrl:'../../../static/image/phone/person_03.png'},
                 {id:2,name:"何丽 UI设计师",imgUrl:'../../../static/image/phone/person_03.png'},
@@ -75,11 +78,11 @@ export default {
             ],
             menuList:[
                   {id:1,name:"首页",url:'/'},
-                  {id:2,name:"业务体系",url:'/'},
-                  {id:3,name:"优秀作品",url:'/'},
-                  {id:4,name:"人才共享",url:'/'},
-                  {id:5,name:"新闻动态",url:'/'},
-                  {id:6,name:"关于我们",url:'/'},
+                  {id:2,name:"业务体系",url:'/business'},
+                  {id:3,name:"优秀作品",url:'/work'},
+                  {id:4,name:"人才共享",url:'/share'},
+                  {id:5,name:"新闻动态",url:'/news'},
+                  {id:6,name:"关于我们",url:'/about'},
             ],
             wechat:["../../../static/image/phone/ewm_03.png","../../../static/image/phone/ewm_05.png"]
         }
@@ -92,7 +95,15 @@ export default {
         Rcgx,
         News
     },
+    methods:{
 
+    },
+    created() {
+      localStorage.setItem("banner",JSON.stringify(this.banner));
+      localStorage.setItem("contact",JSON.stringify(this.contact));
+      localStorage.setItem("wechat",JSON.stringify(this.wechat));
+      localStorage.setItem("menuList",JSON.stringify(this.menuList));
+    }
 }
 </script>
 

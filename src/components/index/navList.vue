@@ -15,12 +15,13 @@ export default {
         }
     },
      methods:{
-        change(item){
-          this.cateId = item.id;
-          console.log(this.cateId);
-          //如果点击分类，切换对应的列表
-          this.$emit("simple",this.cateId);
-        }
+        // change(item){
+        //   // this.cateId = item.id;
+        //   // console.log(item.id);
+        //   //如果点击分类，切换对应的列表
+        //   // this.$emit("father",item.id);
+        //   this.$emit('test',"孙组件")
+        // }
      },
 
     props:['menu','cateId']
